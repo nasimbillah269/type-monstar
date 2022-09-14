@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+</head>
+
+<body>
+    <h4>1. Local Storage And Session Storage Difference</h4>
+    <p><span>Local Storage:</span> This read-only interface property provides access to the Document’s local storage
+        object, the stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage
+        data gets cleared when the page session ends – that is when the page is closed.
+        This behavior cannot be guaranteed because as mentioned above, the file: URL requirements remain unclear
+        The data stored in LocalStorage is specific to a protocol in the document
+        If a document is loaded from a file: URL (that is, directly from the user’s local file system instead of being
+        loaded from the server) the requirements for behavior are undefined and may vary among different browsers.
+    </p>
+    <p> <span> Session Storage :</span>
+        objects can be accessed using the sessionStorage read-only property. The difference between sessionStorage and
+        localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the page
+        session ends.
+        A unique page session gets created once a document is loaded in a browser tab. Page sessions are valid for only
+        one tab at a time.
+    </p>
+</body>
+
+</html>
