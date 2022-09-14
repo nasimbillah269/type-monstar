@@ -11,6 +11,7 @@ let errorCount = 0;
 let startTime;
 let questionText = "";
 
+
 // Load and display question
 fetch("./texts.json")
   .then((res) => res.json())
@@ -25,6 +26,7 @@ const typeController = (e) => {
 
   // Handle backspace press
   if (newLetter == "Backspace") {
+    errorCount++
     userText = userText.slice(0, userText.length - 1);
     return display.removeChild(display.lastChild);
   }
@@ -52,6 +54,8 @@ const typeController = (e) => {
   if (questionText === userText) {
     gameOver();
   }
+
+
 };
 
 const validate = (key) => {
