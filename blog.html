@@ -6,13 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
+    <style>
+        @media only screen and (min-width: 992px) {
+            .main-blog {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        .first-word {
+            font-size: 18px;
+        }
+
+        .blog-question {
+            color: darkorchid;
+            font-size: 20px;
+        }
+
+        .blog-question-answer {
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
     <div class="main-blog">
         <div>
-            <h4>1. Local Storage And Session Storage Difference</h4>
-            <p><span>Local Storage:</span> This read-only interface property provides access to the Document’s local
+            <h4 class="blog-question">1. Local Storage And Session Storage Difference</h4>
+            <p class="blog-question-answer"><span class="first-word">Local Storage:</span> This read-only interface
+                property provides access to the
+                Document’s local
                 storage
                 object, the stored data is stored across browser sessions. Similar to sessionStorage, except that
                 localStorage
@@ -24,7 +48,7 @@
                 loaded from the server) the requirements for behavior are undefined and may vary among different
                 browsers.
             </p>
-            <p> <span> Session Storage :</span>
+            <p class="blog-question-answer"> <span class="first-word"> Session Storage :</span>
                 objects can be accessed using the sessionStorage read-only property. The difference between
                 sessionStorage and
                 localStorage is that localStorage data does not expire, whereas sessionStorage data is cleared when the
@@ -34,34 +58,41 @@
                 for only
                 one tab at a time.
             </p>
-            <div>
-                <h4>2. Global Scope Block Scope Difference</h4>
-                <p> <span>Global scope</span> The variables defined outside of any function or curly brackets are known
-                    as global variables and have global scope. Global scope means that the variables can be accessed
-                    from any part of that program, any function or conditional state can access that variable.</p>
-
-                <p> <span>Block scope</span> is also a sub-type of local scope. The block scope can be defined as the
-                    scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or
-                    conditional statements, or something else. You are only allowed to refer to these variables from
-                    within the curly brackets {}.</p>
-            </div>
-
-            <div>
-                <h4>3.How To Work event Loop</h4>
-                <p>Asynchronous programming means that the code runs in an event loop. When there is a blocking
-                    operation, the event is started. The blocking code keeps running without blocking the main execution
-                    thread. When the blocking code finishes running, it queue’s the result of the blocking operations
-                    and pushes them back to the stack.</p>
-            </div>
         </div>
         <div>
-            <h4>Common Mistakes For Unddefined</h4>
-            <p>Variable that is not initalizes will give unddefined. Function with no return. Paraameter that is not
-                passed will be undefinned. If return has nothing on the right side will return undefined. Property that
-                Document’s exists on an object will give you undefined. accessing array elements outside of the index
-                rage. deleteing an element inside an array. set a value directly to undefine</p>
+            <h4 class="blog-question">2. Global Scope Block Scope Difference</h4>
+            <p class="blog-question-answer"> <span class="first-word">Global scope</span> The variables defined outside
+                of any function or curly
+                brackets are known
+                as global variables and have global scope. Global scope means that the variables can be accessed
+                from any part of that program, any function or conditional state can access that variable.</p>
+
+            <p class="blog-question-answer"> <span>Block scope</span> is also a sub-type of local scope. The block scope
+                can be defined as the
+                scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or
+                conditional statements, or something else. You are only allowed to refer to these variables from
+                within the curly brackets {}.</p>
         </div>
 
+        <div>
+            <h4 class="blog-question">3.How To Work event Loop</h4>
+            <p class="blog-question-answer">Asynchronous programming means that the code runs in an event loop. When
+                there is a blocking
+                operation, the event is started. The blocking code keeps running without blocking the main execution
+                thread. When the blocking code finishes running, it queue’s the result of the blocking operations
+                and pushes them back to the stack.</p>
+        </div>
+
+        <div>
+            <h4 class="blog-question">4. Common Mistakes For Unddefined</h4>
+            <p class="blog-question-answer">Variable that is not initalizes will give unddefined. Function with no
+                return. Paraameter that is not
+                passed will be undefinned. If return has nothing on the right side will return undefined. Property
+                that
+                Document’s exists on an object will give you undefined. accessing array elements outside of the
+                index
+                rage. deleteing an element inside an array. set a value directly to undefine</p>
+        </div>
     </div>
 </body>
 
